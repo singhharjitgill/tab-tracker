@@ -1,5 +1,5 @@
 // Server File
-// Points to User model(table) in sqllite
+// Points to User model(table) in sqlite
 module.exports = (sequelize, DataTypes) =>
   sequelize.define('User', {
     email: {

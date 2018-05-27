@@ -19,6 +19,5 @@ export default new Router({
       name: 'register',
       component: Register
     }
-
   ]
 })

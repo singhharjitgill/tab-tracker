@@ -1,8 +1,11 @@
 // Server File
+// Routes will point to the controllers which have the endpoints defined
+
+const AuthenticationController = require('./controllers/AuthenticationController')
+const AuthenticationControllerPolicy = require('./policies/AuthenticationControllerPolicy')
+
 module.exports = (app) => {
-  app.post('/register', (req, res) => {
-    res.send({
-      message: `Your user is registered!. Hello ${req.body.email}.`
-    })
-  })
+  app.post('/register',
+    AuthenticationControllerPolicy.register,
+    AuthenticationController.register)
 }
