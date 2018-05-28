@@ -10,5 +10,12 @@ module.exports = {
       host: process.env.HOST || 'localhost', // Location of the database to connect to
       storage: './tabtracker.sqlite' // Where to store the database file.
     }
+  },
+
+  authentication: {
+    // For passing JWT token a secret string needs to be passed which is exactly what this will do.
+    // This will pass the secret string which is only known by the server.
+    // The string will used to validate if JWT token is valid or not.
+    jwtSecret: process.env.JWT_SECRET || 'secret'
   }
 }
