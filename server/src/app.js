@@ -14,7 +14,7 @@ app.use(cors())
 require('./routes')(app)
 
 // This will connect to the database. In this case Sqlite
-sequelize.sync()
+sequelize.sync({force: false})
   .then(() => {
     app.listen(config.port)
     console.log(`Server started on port ${config.port}`)

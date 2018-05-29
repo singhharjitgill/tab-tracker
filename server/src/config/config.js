@@ -6,7 +6,7 @@ module.exports = {
     user: process.env.DB_USER || 'tabtracker',
     password: process.env.DB_PASS || 'tabtracker',
     options: {
-      dialect: process.env.DIALECT || 'sqlite', // Tells Sequelize what kind of Database to connect
+      dialect: process.env.DIALECT || 'sqlite', // Tells Sequelize what kind of Database to connect. In this case SqlLite
       host: process.env.HOST || 'localhost', // Location of the database to connect to
       storage: './tabtracker.sqlite' // Where to store the database file.
     }
