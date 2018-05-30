@@ -22,6 +22,7 @@
             class="song"
             :key="song.id">
                 <v-layout>
+
                     <v-flex xs6>
                         <div class="song-title">
                             {{song.title}}
@@ -44,18 +45,12 @@
                                 {songId: song.id}
                             })">
                             View 
-                            {{title}}
                         </v-btn>
-
-
                     </v-flex>
-
-
 
                     <v-flex xs6>
                         <img class="album-image" :src="song.albumImageUrl"/>
                     </v-flex>
-
                 </v-layout>
             </div>
         </panel>
@@ -80,7 +75,6 @@ export default {
         //do a request to the back-end for fetching the records
         this.songs = (await SongsService.index()).data
     },
-
     methods: {
         navigateTo: function(router){
             this.$router.push(router)
