@@ -1,4 +1,6 @@
 // Server File
+const path = require('path')
+
 module.exports = {
   port: process.env.PORT || 8081,
   db: {
@@ -8,7 +10,7 @@ module.exports = {
     options: {
       dialect: process.env.DIALECT || 'sqlite', // Tells Sequelize what kind of Database to connect. In this case SqlLite
       host: process.env.HOST || 'localhost', // Location of the database to connect to
-      storage: './tabtracker.sqlite' // Where to store the database file.
+      storage: path.resolve(__dirname, '../../tabtracker.sqlite') // Where to store the database file.
     }
   },
 

@@ -2,7 +2,6 @@
 
 <template>
     <panel title="You Tube Video" >
-        {{youtubeId}}
         <youtube
             :video-id="youtubeId"
             :player-width = "500"
@@ -14,7 +13,7 @@
 
 <script>
 
-import Panel from '@/components/Panel'
+// import Panel from '@/components/Panel'
 import VueYouTubeEmbeeded from 'vue-youtube-embed'
 
 export default {
@@ -22,7 +21,7 @@ export default {
       'youtubeId'
     ],
     components: {
-        Panel,
+        // Panel,
         VueYouTubeEmbeeded
     }
 

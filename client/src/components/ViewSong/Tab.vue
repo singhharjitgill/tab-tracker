@@ -10,10 +10,10 @@
 </template>
 
 <script>
-import Panel from '@/components/Panel'
+// import Panel from '@/components/Panel'
 export default {
     components: {
-        Panel
+        // Panel
     },
     props: [
       'song'

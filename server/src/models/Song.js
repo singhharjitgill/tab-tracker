@@ -1,5 +1,5 @@
 // Server File
-// Points to User model(table) in sqlite
+// Points to Song model(table) in sqlite
 
 module.exports = (sequelize, DataTypes) => {
   const Song = sequelize.define('Song', {
@@ -12,6 +12,8 @@ module.exports = (sequelize, DataTypes) => {
     lyrics: DataTypes.TEXT,
     tab: DataTypes.TEXT
   })
+  Song.associate = function (models) {
+  }
 
   return Song
 }
